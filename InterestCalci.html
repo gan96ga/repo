@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return false" oninput="output1.value=((parseInt(p.value)*parseInt(n.value)*parseInt(r.value))/100)">
+        <input type="number" name="p" placeholder="Principle" step="10000">
+        *<input type="number" name="n" placeholder="Years" step="1">
+        *<input type="number" name="r" placeholder="Rate of interest" step="1">
+        =<output name="output1" for="p n r"></output>
+    </form>
+</body>
+</html>

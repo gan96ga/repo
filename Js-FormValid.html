@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>
+            Creating Mailing System
+        </title>
+        <style>
+            legend{
+                display: block;
+                padding-left: 2px;
+                padding-right: 2px;
+                border:none;
+            }
+        </style>
+        <script type="text/javascript">
+            function validate()
+            {
+                var user1=document.getElementById("e").value;
+                var user2=document.getElementById("e").value;
+                var re=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                if(re.test(user1))
+                {
+                    alert("Valid form");
+                    return true;
+                }
+                else{
+                    alert("Invalid Email entry")
+                    user2.style.border="red solid 3px";
+                    return false;
+                }
+            }
+            var user1=document.getElementById("c").value;
+            var user2=document.getElementById("c");
+            var re=/^[7-9][0-9]{9}$/;
+            if(re.test(user1))
+            {
+                alert("Valid Contact id.")
+                return true;
+            }
+            else
+            {
+                alert("Enter valid contact id")
+                user2.style.border="red solid 3px";
+                return false;
+            }
+        </script>
+    </head>
+    <body bgcolor="cyan">
+        <center>
+        <h1>Email Registration</h1>
+        <form >
+            <fieldset style="width: 300px;">
+            <legend>Registration Form</legend>
+            <table>
+                <tr>
+                    <input type="text" placeholder="firstname" maxlength="10">
+                </tr><br>
+                <tr>
+                    <input type="text" placeholder="lastname" maxlength="10">
+                </tr><br>
+                <tr>
+                    <input type="email" placeholder="username@gmail.com" id="e">
+                </tr><br>
+                <tr>
+                    <input type="password" placeholder="password">
+                </tr><br>
+                <tr>
+                    <input type="password" placeholder="confirm">
+                </tr><br>
+                <tr>
+                    <input type="text" placeholder="contact" id="c">
+                </tr><br>
+                <tr>
+                    <label>
+                        Gender:
+                    </label>
+                    <select id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="others">Others</option>
+                    </select>
+                </tr><br>
+                <tr><input type="submit" onclick="validate()" value="Create"></tr>
+            </table>
+        </fieldset>
+        </form>
+        </center>
+    </body>
+</html>
